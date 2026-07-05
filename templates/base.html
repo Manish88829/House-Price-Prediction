@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}House Price Prediction{% endblock %}</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="{{ url_for('home') }}">
+                <i class="fas fa-house"></i>
+                <span>House Price Prediction</span>
+            </a>
+
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <i class="fas fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">
+                        <i class="fas fa-circle-info"></i>
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('price_trends') }}">
+                        <i class="fas fa-chart-line"></i>
+                        Price Trends
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faq') }}">
+                        <i class="fas fa-circle-question"></i>
+                        FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">
+                        <i class="fas fa-phone"></i>
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= PAGE CONTENT ================= -->
+
+    <main>
+
+        {% block content %}
+
+        {% endblock %}
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 House Price Prediction |
+            Developed by <strong>Manish Kumar</strong>
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

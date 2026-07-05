@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Price Trends | House Price Prediction</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="{{ url_for('home') }}" style="text-decoration:none;color:#2563eb;">
+
+                <i class="fas fa-house"></i>
+
+                <span>House Price Prediction</span>
+
+            </a>
+
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <i class="fas fa-house"></i> Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">
+                        <i class="fas fa-circle-info"></i> About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('price_trends') }}" class="active">
+                        <i class="fas fa-chart-line"></i> Price Trends
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faq') }}">
+                        <i class="fas fa-circle-question"></i> FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">
+                        <i class="fas fa-phone"></i> Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="about-header">
+
+            <h1>House Price Trends</h1>
+
+            <p>
+
+                Explore the latest insights into the real estate market.
+                Understanding market trends helps buyers, sellers, and investors
+                make informed property decisions.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TREND CARDS ================= -->
+
+    <section class="trends-section">
+
+        <div class="trend-grid">
+
+            <div class="trend-card">
+
+                <i class="fas fa-arrow-trend-up"></i>
+
+                <h3>Market Growth</h3>
+
+                <p>
+
+                    Residential property prices have shown steady growth over
+                    recent years due to increasing urban development.
+
+                </p>
+
+            </div>
+
+            <div class="trend-card">
+
+                <i class="fas fa-building"></i>
+
+                <h3>High Demand Areas</h3>
+
+                <p>
+
+                    Metro cities and rapidly developing locations continue
+                    to experience higher property appreciation.
+
+                </p>
+
+            </div>
+
+            <div class="trend-card">
+
+                <i class="fas fa-chart-column"></i>
+
+                <h3>Average Price</h3>
+
+                <p>
+
+                    Average housing prices generally increase with larger
+                    area, more bedrooms, and premium locations.
+
+                </p>
+
+            </div>
+
+            <div class="trend-card">
+
+                <i class="fas fa-coins"></i>
+
+                <h3>Investment Tips</h3>
+
+                <p>
+
+                    Long-term investment in residential properties often
+                    provides better returns and stable appreciation.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= TABLE ================= -->
+
+    <section class="price-table-section">
+
+        <h2>Sample House Price Trends</h2>
+
+        <table class="price-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Area (Sq.Ft.)</th>
+                    <th>Bedrooms</th>
+                    <th>Bathrooms</th>
+                    <th>Estimated Price</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>1000</td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>₹35,00,000</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>1500</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>₹55,00,000</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2000</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>₹75,00,000</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2500</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>₹95,00,000</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3200</td>
+                    <td>5</td>
+                    <td>4</td>
+                    <td>₹1,30,00,000</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <!-- ================= TIPS ================= -->
+
+    <section class="tips-section">
+
+        <h2>Factors Affecting House Prices</h2>
+
+        <div class="tips-grid">
+
+            <div class="tip-box">
+
+                <i class="fas fa-location-dot"></i>
+
+                <h3>Location</h3>
+
+                <p>
+
+                    Prime locations generally have higher property values due
+                    to better infrastructure and connectivity.
+
+                </p>
+
+            </div>
+
+            <div class="tip-box">
+
+                <i class="fas fa-ruler-combined"></i>
+
+                <h3>Area</h3>
+
+                <p>
+
+                    Larger homes usually command higher market prices than
+                    smaller properties.
+
+                </p>
+
+            </div>
+
+            <div class="tip-box">
+
+                <i class="fas fa-bed"></i>
+
+                <h3>Amenities</h3>
+
+                <p>
+
+                    Modern amenities, parking, security, and green spaces
+                    significantly increase property value.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            © 2026 House Price Prediction | Developed using Python, Flask &
+            Machine Learning.
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

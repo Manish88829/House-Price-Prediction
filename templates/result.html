@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Left Side -->
+
+    <div class="left-section">
+
+        <img src="{{ url_for('static', filename='images/house.png') }}"
+             class="house-image">
+
+        <h1>House Price Prediction</h1>
+
+        <p>
+            Your house price has been predicted successfully.
+            Check the estimated value on the right.
+        </p>
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="right-section">
+
+        <div class="result-card">
+
+            <h2>Prediction Result</h2>
+
+            <div class="price-box">
+
+                <h3>Estimated Price</h3>
+
+                <div class="price">
+
+                    {{ prediction }}
+
+                </div>
+
+            </div>
+
+            <div class="details">
+
+                <div class="detail-box">
+
+                    <span>📐 Area</span>
+
+                    <strong>{{ area }} sq ft</strong>
+
+                </div>
+
+                <div class="detail-box">
+
+                    <span>🛏 Bedrooms</span>
+
+                    <strong>{{ bedrooms }}</strong>
+
+                </div>
+
+                <div class="detail-box">
+
+                    <span>🛁 Bathrooms</span>
+
+                    <strong>{{ bathrooms }}</strong>
+
+                </div>
+
+            </div>
+
+            <a href="/" class="back-btn">
+
+                Predict Another House
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

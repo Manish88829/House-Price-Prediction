@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | House Price Prediction</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <a href="{{ url_for('home') }}" style="text-decoration:none;color:#2563eb;">
+                <i class="fas fa-house"></i>
+                <span>House Price Prediction</span>
+            </a>
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <i class="fas fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}" class="active">
+                        <i class="fas fa-circle-info"></i>
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('price_trends') }}">
+                        <i class="fas fa-chart-line"></i>
+                        Price Trends
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faq') }}">
+                        <i class="fas fa-circle-question"></i>
+                        FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">
+                        <i class="fas fa-phone"></i>
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= ABOUT HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="about-header">
+
+            <h1>About House Price Prediction</h1>
+
+            <p>
+
+                Our House Price Prediction System uses Machine Learning to
+                estimate property prices based on important features like
+                area, bedrooms and bathrooms.
+
+                The application is designed to provide fast, reliable and
+                user-friendly predictions that help buyers, sellers and
+                real estate enthusiasts make better decisions.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= ABOUT CONTENT ================= -->
+
+    <section class="about-section">
+
+        <div class="about-container">
+
+            <!-- Left -->
+
+            <div class="about-image">
+
+                <img src="{{ url_for('static', filename='images/house.png') }}"
+                    alt="House">
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="about-content">
+
+                <h2>Why Choose Our Predictor?</h2>
+
+                <p>
+
+                    Our Machine Learning model has been trained using housing
+                    data and predicts prices based on real property features.
+                    The application combines a clean interface with intelligent
+                    prediction to deliver quick results.
+
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+
+                        <i class="fas fa-bolt"></i>
+
+                        <h3>Instant Prediction</h3>
+
+                        <p>
+
+                            Predict house prices within seconds using our
+                            trained Machine Learning model.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <i class="fas fa-brain"></i>
+
+                        <h3>Machine Learning</h3>
+
+                        <p>
+
+                            Built using Python, Flask and Scikit-Learn for
+                            accurate predictions.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <i class="fas fa-mobile-screen"></i>
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+
+                            Optimized for desktop, tablet and mobile devices.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <i class="fas fa-user-check"></i>
+
+                        <h3>Easy To Use</h3>
+
+                        <p>
+
+                            A simple interface designed for everyone.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    

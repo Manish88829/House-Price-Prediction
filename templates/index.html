@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fas fa-house"></i>
+
+            <span>House Price Prediction</span>
+
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        <i class="fas fa-house"></i> Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">
+    <i class="fas fa-circle-info"></i> About
+</a>
+                </li>
+
+                <li>
+                    <a href="#trends">
+                        <i class="fas fa-chart-line"></i> Price Trends
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#faq">
+                        <i class="fas fa-circle-question"></i> FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        <i class="fas fa-phone"></i> Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= END NAVBAR ================= -->
+
+    <div class="container" id="home">
+
+        <!-- Left Section -->
+        <div class="left-section">
+
+            <img src="{{ url_for('static', filename='images/house.png') }}"
+                alt="House"
+                class="house-image">
+
+            <h1>House Price Prediction</h1>
+
+            <p>
+                Predict your dream home's price using Machine Learning.
+                Enter the property details and receive an instant estimate.
+            </p>
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+
+            <div class="form-card">
+
+                <h2>Predict Price</h2>
+
+                <form action="/predict" method="POST" id="predictionForm">
+
+                    <div class="input-box">
+
+                        <label>Area (Square Feet)</label>
+
+                        <input
+                            type="number"
+                            name="area"
+                            placeholder="Enter Area"
+                            min="500"
+                            required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Bedrooms</label>
+
+                        <input
+                            type="number"
+                            name="bedrooms"
+                            placeholder="Number of Bedrooms"
+                            min="1"
+                            max="10"
+                            required>
+
+                    </div>
+
+                    <div class="input-box">
+
+                        <label>Bathrooms</label>
+
+                        <input
+                            type="number"
+                            name="bathrooms"
+                            placeholder="Number of Bathrooms"
+                            min="1"
+                            max="10"
+                            required>
+
+                    </div>
+
+                    <button type="submit" id="predictBtn">
+                        Predict Price
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

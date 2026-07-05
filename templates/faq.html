@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAQ | House Price Prediction</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <a href="{{ url_for('home') }}" style="text-decoration:none;color:#2563eb;">
+
+                <i class="fas fa-house"></i>
+
+                <span>House Price Prediction</span>
+
+            </a>
+
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <i class="fas fa-house"></i> Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">
+                        <i class="fas fa-circle-info"></i> About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('price_trends') }}">
+                        <i class="fas fa-chart-line"></i> Price Trends
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faq') }}" class="active">
+                        <i class="fas fa-circle-question"></i> FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}">
+                        <i class="fas fa-phone"></i> Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="about-header">
+
+            <h1>Frequently Asked Questions</h1>
+
+            <p>
+
+                Find answers to the most common questions about our
+                House Price Prediction application.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="faq-section">
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    What is House Price Prediction?
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        House Price Prediction is a Machine Learning application
+                        that estimates property prices based on features such as
+                        area, bedrooms and bathrooms.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Which technologies are used?
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        This project is developed using Python, Flask,
+                        Scikit-Learn, HTML, CSS and JavaScript.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    How accurate are the predictions?
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Predictions are generated from a trained Machine Learning
+                        model and provide an estimated property value based on
+                        the supplied inputs.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Which factors affect house prices?
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Important factors include location, area, number of
+                        bedrooms, bathrooms, nearby facilities and current
+                        market conditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Is this application free to use?
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. This project is developed for educational purposes
+                        and can be used freely to estimate house prices.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+                    Can I use it on mobile devices?
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Yes. The website is fully responsive and works on
+                        desktop, tablet and mobile devices.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+
+            © 2026 House Price Prediction | Developed using Python, Flask &
+            Machine Learning.
+
+        </p>
+
+    </footer>
+
+    <!-- FAQ JavaScript -->
+
+    <script>
+
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(question => {
+
+            question.addEventListener("click", () => {
+
+                const answer = question.nextElementSibling;
+
+                question.classList.toggle("active");
+
+                if(answer.style.maxHeight){
+
+                    answer.style.maxHeight = null;
+
+                }else{
+
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

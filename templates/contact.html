@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | House Price Prediction</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <a href="{{ url_for('home') }}" style="text-decoration:none;color:#2563eb;">
+                <i class="fas fa-house"></i>
+                <span>House Price Prediction</span>
+            </a>
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <i class="fas fa-house"></i>
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('about') }}">
+                        <i class="fas fa-circle-info"></i>
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('price_trends') }}">
+                        <i class="fas fa-chart-line"></i>
+                        Price Trends
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('faq') }}">
+                        <i class="fas fa-circle-question"></i>
+                        FAQ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('contact') }}" class="active">
+                        <i class="fas fa-phone"></i>
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= CONTACT HERO ================= -->
+
+    <section class="about-hero">
+
+        <div class="about-header">
+
+            <h1>Contact Us</h1>
+
+            <p>
+                We'd love to hear from you. Whether you have a question,
+                feedback, or suggestions about our House Price Prediction
+                application, feel free to contact us.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- Contact Information -->
+
+            <div class="contact-info">
+
+                <h2>Get In Touch</h2>
+
+                <p>
+                    You can contact us anytime. We usually respond within
+                    24 hours.
+                </p>
+
+                <div class="info-box">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <h3>Name</h3>
+                        <p>Manish Kumar</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>manish@example.com</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+91 8547693254</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Noida, Uttar Pradesh, India</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+
+            <div class="contact-form">
+
+                <h2>Send Message</h2>
+
+                <form>
+
+                    <div class="input-box">
+                        <label>Full Name</label>
+                        <input type="text"
+                               placeholder="Enter your name"
+                               required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Email Address</label>
+                        <input type="email"
+                               placeholder="Enter your email"
+                               required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Subject</label>
+                        <input type="text"
+                               placeholder="Subject"
+                               required>
+                    </div>
+
+                    <div class="input-box">
+                        <label>Your Message</label>
+                        <textarea rows="6"
+                                  placeholder="Write your message..."
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <p>
+            © 2026 House Price Prediction | Developed using Python, Flask &
+            Machine Learning.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
