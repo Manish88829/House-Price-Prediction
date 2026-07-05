@@ -1,43 +1,59 @@
 # 🏠 House Price Prediction
 
-A Machine Learning based House Price Prediction web application built using Python, Flask, Scikit-Learn, HTML, CSS and JavaScript.
+A Machine Learning-based House Price Prediction web application built using **Python, Flask, Scikit-Learn, HTML, CSS, and JavaScript**. The application predicts house prices based on user-provided property details through a clean and responsive web interface.
 
-## Features
+---
 
-- Predict house prices using Machine Learning
-- Modern responsive UI
-- About Page
-- Contact Page
-- FAQ Page
-- Price Trends Page
-- Beautiful Result Page
+## ✨ Features
 
-## Tech Stack
+- 🏡 Predict house prices using a trained Machine Learning model
+- 📊 Display predicted prices in Indian currency format
+- 📱 Responsive and user-friendly interface
+- ℹ️ About page
+- 📈 Price Trends page
+- ❓ FAQ page
+- 📞 Contact page
+- 🎯 Attractive result page with prediction details
 
-- Python
-- Flask
-- Scikit-Learn
-- Pandas
-- NumPy
-- HTML5
-- CSS3
-- JavaScript
+---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+- **Backend:** Python, Flask
+- **Machine Learning:** Scikit-Learn, Pandas, NumPy
+- **Frontend:** HTML5, CSS3, JavaScript
+
+---
+
+## 📁 Project Structure
 
 ```
-House-Price-Prediction
+House-Price-Prediction/
 │
 ├── app.py
 ├── train_model.py
 ├── requirements.txt
-├── model/
 ├── data/
+│   └── housing.csv
+├── model/
+│   └── house_model.pkl
 ├── static/
-├── templates/
+│   ├── css/
+│   ├── images/
+│   └── js/
+└── templates/
+    ├── index.html
+    ├── result.html
+    ├── about.html
+    ├── contact.html
+    ├── faq.html
+    ├── price_trends.html
+    └── base.html
 ```
 
-## Installation
+---
+
+## 🚀 Installation
 
 ```bash
 git clone https://github.com/Manish88829/House-Price-Prediction.git
@@ -49,6 +65,16 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Author
+Then open your browser and visit:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+## 👨‍💻 Author
 
 **Manish Kumar**
+
+GitHub: https://github.com/Manish88829
